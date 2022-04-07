@@ -4,7 +4,7 @@ import './styles/Sidebar.css';
 
 export default class Sidebar extends Component {
     mudandoCor(e) {
-        const buttons = document.querySelectorAll('.link-route');
+        const buttons = document.querySelectorAll('.link-router');
         buttons.forEach((button) => {
             button.classList.remove('active')
 
@@ -19,7 +19,7 @@ export default class Sidebar extends Component {
             <nav className="sidebar">
                 <div className="section-sidebar">
                     <div className="nav-button home" onClick={this.mudandoCor}>
-                        <Link className="link-route" to="/">
+                        <Link className="link-router" to="/">
                             <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.13478 20.7733V17.7156C9.13478 16.9351 9.77217 16.3023 10.5584 16.3023H13.4326C13.8102 16.3023 14.1723 16.4512 14.4393 16.7163C14.7063 16.9813 14.8563 17.3408 14.8563 17.7156V20.7733C14.8539 21.0978 14.9821 21.4099 15.2124 21.6402C15.4427 21.8705 15.7561 22 16.0829 22H18.0438C18.9596 22.0023 19.8388 21.6428 20.4872 21.0008C21.1356 20.3588 21.5 19.487 21.5 18.5778V9.86686C21.5 9.13246 21.1721 8.43584 20.6046 7.96467L13.934 2.67587C12.7737 1.74856 11.1111 1.7785 9.98539 2.74698L3.46701 7.96467C2.87274 8.42195 2.51755 9.12064 2.5 9.86686V18.5689C2.5 20.4639 4.04738 22 5.95617 22H7.87229C8.55123 22 9.103 21.4562 9.10792 20.7822L9.13478 20.7733Z" fill="#D6D1D1"/>
                             </svg>
@@ -38,14 +38,14 @@ export default class Sidebar extends Component {
                 </div>
                 <div className="section-sidebar">
                     <div className="nav-button explore" onClick={this.mudandoCor}>
-                        <Link className="link-route" to="/explore">
+                        <Link className="link-router" to="/explore">
                             <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.9999 2.00012C17.5199 2.00012 21.9999 6.48012 21.9999 12.0001C21.9999 17.5301 17.5199 22.0001 11.9999 22.0001C6.46991 22.0001 1.99991 17.5301 1.99991 12.0001C1.99991 6.48012 6.46991 2.00012 11.9999 2.00012ZM15.8499 8.71012C15.9599 8.36012 15.6399 8.03012 15.2899 8.14012L10.1699 9.74012C9.95991 9.81012 9.78991 9.97012 9.72991 10.1801L8.12991 15.3101C8.01991 15.6501 8.34991 15.9801 8.68991 15.8701L13.7899 14.2701C13.9999 14.2101 14.1699 14.0401 14.2299 13.8301L15.8499 8.71012Z" fill="#D6D1D1"/>
                             </svg>
                         </Link>
                     </div>
                     <div className="nav-button profile" onClick={this.mudandoCor}>
-                        <Link className="link-route" to="/perfil">
+                        <Link className="link-router" to="/perfil">
                             <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 15.1739C16.3386 15.1739 20 15.8789 20 18.599C20 21.32 16.3146 22 12 22C7.66237 22 4 21.295 4 18.575C4 15.8539 7.68538 15.1739 12 15.1739ZM12 2C14.9391 2 17.294 4.35402 17.294 7.29105C17.294 10.2281 14.9391 12.5831 12 12.5831C9.0619 12.5831 6.70601 10.2281 6.70601 7.29105C6.70601 4.35402 9.0619 2 12 2Z" fill="#D6D1D1"/>
                             </svg>
