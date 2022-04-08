@@ -41,11 +41,6 @@
     pointer-events: none;
 }
 
-.nav-button .link-router {
-    display: flex;
-    height: 100%;
-}
-
 .nav-button .link-router.active path {
     fill: #5142AB;
 }
