@@ -14,6 +14,8 @@ export default function Sidebar() {
         if(indexProfile === -1) {
             buttons[0].classList.add('active');
             return true;
+        } else {
+            buttons[1].classList.add('active');
         }
 
         return false;
