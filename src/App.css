@@ -10,6 +10,13 @@ body {
   font-family: 'Archivo', sans-serif;
 }
 
+.link-router {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 /* user-agent font-size is 16px, let's make it responsive */
 @media(max-width: 1080px) {
   html {
