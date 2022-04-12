@@ -1,6 +1,7 @@
+import React from 'react';
 import '../components/styles/Perfil.css';
-import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import FormProfile from '../components/FormProfile';
 
 export default function Perfil() {
     const userConfig = {
@@ -19,28 +20,6 @@ export default function Perfil() {
             }
         })
     }
-
-    //cep
-    const {register, handleSubmit, setValue, setFocus} = useForm();
-
-    const onSubmit = (e) => {
-      console.log(e);
-    }
-  
-    const checkCEP = (e) => {
-      const cep = e.target.value.replace(/\D/g, '');
-      console.log(cep);
-      fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {
-        console.log(data);
-        // register({ name: 'address', value: data.logradouro });
-        setValue('address', data.logradouro);
-        setValue('neighborhood', data.bairro);
-        setValue('city', data.localidade);
-        setValue('uf', data.uf);
-        setFocus('addressNumber');
-      });
-    }
-
 
     return (
         <div className="container">
@@ -66,38 +45,8 @@ export default function Perfil() {
                     </div>
                 </div>
             </header>
-            <div className="container-data">
-                <form className="form-endereco" onSubmit={handleSubmit(onSubmit)}>
-                    <label>
-                        <div className="title-label">CEP</div>
-                        <input type="text" {...register("cep")} onBlur={checkCEP} />
-                    </label>
-                    <label>
-                        <div className="title-label">Rua</div>
-                        <input type="text" {...register("address" )}/>
-                    </label>
-                    <label>
-                        <div className="title-label">Número</div>
-                        <input type="text" {...register("addressNumber" )}/>
-                    </label>
-                    <label>
-                        <div className="title-label">Bairro</div>
-                        <input type="text" {...register("neighborhood" )}/>
-                    </label>
-                    <label>
-                        <div className="title-label">Cidade</div>
-                        <input type="text" {...register("city" )}/>
-                    </label>
-                    <label>
-                        <div className="title-label">Estado</div>
-                        <input type="text" {...register("uf" )}/>
-                    </label>
-                <button type="submit">Enviar</button>
-                </form>
-                </div>
+            {/* <FormProfile /> */}
+            
         </div>
-    )
-
-    
-      
+    ) 
 }
