@@ -1,6 +1,16 @@
-.container {
+#root {
     height: 100vh;
+}
+
+.container {
+    height: calc(100% - 70px);
     background: #F9F9F9;
+    overflow: scroll;
+}
+
+.menu-bottom {
+    height: 70px;
+    background: red;
 }
 
 header {
