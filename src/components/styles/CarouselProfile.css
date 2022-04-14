@@ -1,0 +1,83 @@
+.container-info-profile {
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.title-info-profile {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4A4A4A;
+}
+
+.description-profile {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #C4C4C4;
+}
+
+.owl-theme {
+    margin-top: 15px;
+}
+
+.owl-stage-outer {
+    background: #FAFAFA;
+    border-radius: 10px;
+}
+
+.owl-theme .item ul {
+    list-style: none;
+}
+
+.owl-item {
+    padding: 5px 15px 15px;
+}
+
+.owl-item .item .title-carousel {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4A4A4A;
+}
+
+.owl-item .item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.owl-item .item ul h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #8379C0;
+}
+
+.owl-item .item ul p {
+    font-size: 1.2rem;
+    color: #9F9F9F;
+}
+
+.owl-nav {
+    display: none;
+}
+
+.owl-dots {
+    margin-top: 5px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 7px !important;
+    height: 7px !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    width: 9px !important;
+    height: 9px !important;
+    background: #5142AB !important;
+}
