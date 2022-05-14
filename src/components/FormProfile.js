@@ -1,4 +1,5 @@
 import React from  'react';
+import { Formik, Form, Field } from 'formik';
 
 export default function FormProfile() {
     function searchCep() {
@@ -21,33 +22,46 @@ export default function FormProfile() {
 
     return (
         <div className="container-data">
-            <form className="form-endereco">
-                <label>
-                    <div className="title-label">CEP</div>
-                    <input type="text" id="cep" onBlur={searchCep}/>
-                </label>
-                <label>
-                    <div className="title-label">Rua</div>
-                    <input type="text" id="rua"/>
-                </label>
-                <label>
-                    <div className="title-label">Número</div>
-                    <input type="text" id="numero"/>
-                </label>
-                <label>
-                    <div className="title-label">Bairro</div>
-                    <input type="text" id="bairro"/>
-                </label>
-                <label>
-                    <div className="title-label">Cidade</div>
-                    <input type="text" id="cidade"/>
-                </label>
-                <label>
-                    <div className="title-label">Estado</div>
-                    <input type="text" id="uf"/>
-                </label>
-                    <button type="submit">Enviar</button>
-            </form>
+            <Formik
+                initialValues={{
+                    cep: '',
+                    rua: '',
+                    numero: '',
+                    bairro: '',
+                    cidade: '',
+                    uf: ''
+                }}
+            >
+                {() => (
+                    <Form className="form-endereco">
+                        <div>
+                            <label htmlFor="cep" className="title-label">CEP</label>
+                            <Field id="cep" name="cep" type="text" onBlur={searchCep} />
+                        </div>
+                        <div>
+                            <label htmlFor="rua" className="title-label">Rua</label>
+                            <Field id="rua" name="rua" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="numero" className="title-label">Número</label>
+                            <Field id="numero" name="numero" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="bairro" className="title-label">Bairro</label>
+                            <Field id="bairro" name="bairro" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="cidade" className="title-label">Cidade</label>
+                            <Field id="cidade" name="cidade" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="uf" className="title-label">Estado</label>
+                            <Field id="uf" name="uf" type="text" />
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </Form>
+                )}
+            </Formik>
         </div>
     )
 }
